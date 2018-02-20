@@ -10,6 +10,9 @@
 #define WEEK2_H_
 
 void wait(int);
+void Week2_asignment2();
+void Week2_asignment3();
 void stepTaillight();
+void displayNumber(int);
 
 #endif /* WEEK2_H_ */
