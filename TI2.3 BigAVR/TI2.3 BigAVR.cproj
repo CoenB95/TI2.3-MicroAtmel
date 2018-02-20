@@ -122,7 +122,10 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="main.c">
+    <Compile Include="week2.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="week2.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>
