@@ -1,4 +1,4 @@
 TI2.3 BigAVR/.vs/
-TI2.3 BigAVR/Debug
-TI2.3 BigAVR/TI2.3 BigAVR.componentinfo.xml
+**/Debug
+*.componentinfo.xml
 TI2.3 BigAVR.atsln
