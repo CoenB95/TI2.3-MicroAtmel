@@ -22,6 +22,8 @@ Display display = {
 	1 //8bit mode at start.
 };
 
+
+
 void LCD_clear()
 {
 	LCD_writeCommand(0x01);
