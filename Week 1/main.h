@@ -33,6 +33,8 @@ PatternPart knightRiderPattern[] =
 	{0x00, 0}
 };
 
+void Week1_assignment2(void);
+void Week1_assignment3(void);
 void Week1_assignment5(void);
 void runPattern(PatternPart*);
 

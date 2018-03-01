@@ -13,7 +13,7 @@
     <OutputFileExtension>.elf</OutputFileExtension>
     <OutputDirectory>$(MSBuildProjectDirectory)\$(Configuration)</OutputDirectory>
     <AssemblyName>TI2.3 BigAVR</AssemblyName>
-    <Name>TI2.3 BigAVR</Name>
+    <Name>Week 2</Name>
     <RootNamespace>TI2.3 BigAVR</RootNamespace>
     <ToolchainFlavour>Native</ToolchainFlavour>
     <KeepTimersRunning>true</KeepTimersRunning>
@@ -122,6 +122,12 @@
     </ToolchainSettings>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="wait.c">
+      <SubType>compile</SubType>
+    </Compile>
+    <Compile Include="wait.h">
+      <SubType>compile</SubType>
+    </Compile>
     <Compile Include="week2.c">
       <SubType>compile</SubType>
     </Compile>

@@ -5,34 +5,61 @@
  * Author : coenb
  */ 
 
-#define F_CPU 8e6
-
 #include <avr/io.h>
-#include <util/delay.h>
 #include "main.h"
-
-/* 
-short:			Busy wait number of millisecs
-inputs:			int ms (Number of millisecs to busy wait)
-outputs:	
-notes:			Busy wait, not very accurate. Make sure (external)
-				clock value is set. This is used by _delay_ms inside
-				util/delay.h
-Version :    	DMK, Initial code
-*******************************************************************/
-void wait(int ms)
-{
-	for (int i=0; i<ms; i++)
-	{
-		_delay_ms(1);		// library function (max 30 ms at 8MHz)
-	}
-}
+#include "wait.h"
 
 int main(void)
 {
 	//Select the assignment you want to see executed:
 	
-    Week1_assignment5();
+	//Week1_assignment2();
+	Week1_assignment3();
+    //Week1_assignment5();
+}
+
+void Week1_assignment2()
+{
+	//Set all PORTD to act as outputs
+	DDRD = 0xFF;
+	
+	while (1)
+	{
+		wait(500);
+		PORTD |= (1 << 7);
+			
+		wait(500);
+		PORTD &= ~(1 << 7);
+	}
+}
+
+void Week1_assignment3()
+{
+	int pinHoog = 0;
+
+	//Set all PORTC to act as inputs
+	DDRC = 0x00;
+
+	//Set all PORTD to act as outputs
+	DDRD = 0xFF;
+	
+	while (1)
+	{
+		if(!(PINC & 0x01))
+		{
+			if(!pinHoog)
+			{
+				PORTD |= (1 << 7);
+				pinHoog = 1;
+			}
+			else
+			{
+				PORTD &= ~(1 << 7);
+				pinHoog = 0;
+			}
+		}
+		wait(500);
+	}
 }
 
 void Week1_assignment5()
