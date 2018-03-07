@@ -2,7 +2,7 @@
  * wait.h
  *
  * Created: 23-2-2018 12:39:48
- *  Author: coenb
+ *  Author: Coen Boelhouwers, Sander de Nooijer
  */ 
 
 

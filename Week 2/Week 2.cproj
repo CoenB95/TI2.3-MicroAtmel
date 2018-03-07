@@ -128,10 +128,10 @@
     <Compile Include="wait.h">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="week2.c">
+    <Compile Include="main.c">
       <SubType>compile</SubType>
     </Compile>
-    <Compile Include="week2.h">
+    <Compile Include="main.h">
       <SubType>compile</SubType>
     </Compile>
   </ItemGroup>

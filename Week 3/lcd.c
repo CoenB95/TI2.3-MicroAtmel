@@ -1,8 +1,8 @@
 /*
- * lcd.c
+ * Week 3 - lcd.c
  *
  * Created: 23-2-2018 10:47:20
- *  Author: Coen Boelhouwers and Sander de Nooijer
+ *  Author: Coen Boelhouwers, Sander de Nooijer
  */ 
 #include <avr/io.h>
 #include "lcd.h"

@@ -1,13 +1,17 @@
 /*
- * main.h
+ * Week 1 - main.h
  *
  * Created: 1-3-2018 12:55:39
- *  Author: coenb
+ *  Author: Coen Boelhouwers, Sander de Nooijer
  */ 
 
 
 #ifndef MAIN_H_
 #define MAIN_H_
+
+#define CHARLIE_HIGH 1
+#define CHARLIE_LOW 0
+#define CHARLIE_TRI 2
 
 typedef struct {
 	int data;
@@ -37,6 +41,9 @@ void Week1_assignment2(void);
 void Week1_assignment3(void);
 void Week1_assignment4(void);
 void Week1_assignment5(void);
+void Week1_assignment6(void);
+void Week1_assignment7b(void);
 void runPattern(PatternPart*);
+void setCharlieLed(int);
 
 #endif /* MAIN_H_ */

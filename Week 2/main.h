@@ -1,8 +1,8 @@
 /*
- * week2.h
+ * Week 2 - main.h
  *
  * Created: 20-2-2018 12:42:51
- *  Author: sander
+ *  Author: Coen Boelhouwers, Sander de Nooijer
  */ 
 
 
