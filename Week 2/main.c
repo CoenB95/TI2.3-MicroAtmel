@@ -7,7 +7,7 @@
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
-#include "week2.h"
+#include "main.h"
 
 #define MAX_NUMBERS 16
 

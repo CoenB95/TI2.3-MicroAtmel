@@ -20,7 +20,8 @@ int main(void)
 	//Week1_assignment3();
 	//Week1_assignment4();
     //Week1_assignment5();
-	Week1_assignment6();
+	//Week1_assignment6();
+	Week1_assignment7b();
 }
 
 void Week1_assignment2()
@@ -146,6 +147,21 @@ void Week1_assignment6()
 	}
 }
 
+void Week1_assignment7b()
+{
+	int led = 0; 
+	//Set all PORTD to act as inputs
+	DDRD = 0x00;		
+		
+	while(1)
+	{
+		led = (led + 1) % 6;
+		setCharlieLed(led);
+		wait(500);
+	}
+		
+}
+
 void runPattern(PatternPart* pattern)
 {
 	int index = 0;
@@ -155,6 +171,37 @@ void runPattern(PatternPart* pattern)
 		PORTD = pattern[index].data;
 		wait(pattern[index].delay);
 		index++;
+	}
+}
+
+void setCharlieLed(int lednr)
+{	
+	switch (lednr)
+	{
+		case 0:
+			DDRD = 0b110;
+			PORTD = 0b100;
+			break;
+		case 1:
+			DDRD = 0b110;
+			PORTD = 0b010;
+			break;
+		case 2:
+			DDRD = 0b011;
+			PORTD = 0b010;
+			break;
+		case 3:
+			DDRD = 0b011;
+			PORTD = 0b001;
+			break;
+		case 4:
+			DDRD = 0b101;
+			PORTD = 0b001;
+			break;
+		case 5:
+			DDRD = 0b101;
+			PORTD = 0b100;
+			break;
 	}
 }
 
