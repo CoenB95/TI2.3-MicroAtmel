@@ -18,6 +18,7 @@ int main(void)
 	
 	//Week1_assignment2();
 	//Week1_assignment3();
+	//Week1_assignment4();
     //Week1_assignment5();
 	Week1_assignment6();
 }
@@ -63,6 +64,28 @@ void Week1_assignment3()
 			}
 		}
 		wait(500);
+	}
+}
+
+
+void Week1_assignment4()
+{
+	DDRD = 0xFF;
+	int currentlight = 0;	
+	while(1)
+	{
+		currentlight = (currentlight + 1) % 8 ;
+		
+		PORTD |= (1 << currentlight);
+		if(currentlight > 0)
+		{
+		PORTD &= ~(1 << (currentlight - 1));		
+		}
+		else
+		{
+		PORTD &= ~(1 << 7);
+		}
+		wait(50);
 	}
 }
 
