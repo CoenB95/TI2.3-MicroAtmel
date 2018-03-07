@@ -124,7 +124,7 @@ void Week4_assignment3()
 
 void Week4_assignment4()
 {
-	int i = 0;
+	int i = -150;
 	
 	DDRB=0x01;					// Set PB0 pin as output for display select
 	spi_masterInit();              	// Initialize spi module

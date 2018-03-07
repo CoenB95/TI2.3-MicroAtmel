@@ -57,8 +57,19 @@ void spi_writeSegment(unsigned char address, unsigned char data)
 
 void spi_writeNumber(int value)
 {
-	spi_writeSegment(1, value % 10);
-	spi_writeSegment(2, (value/10) % 10);
-	spi_writeSegment(3, (value/100) % 10);
-	spi_writeSegment(4, (value/1000) % 10);
+	if (value < 0)
+	{
+		value *= -1;
+		spi_writeSegment(1, value % 10);
+		spi_writeSegment(2, (value/10) % 10);
+		spi_writeSegment(3, (value/100) % 10);
+		spi_writeSegment(4, 10);
+	}
+	else
+	{
+		spi_writeSegment(1, value % 10);
+		spi_writeSegment(2, (value/10) % 10);
+		spi_writeSegment(3, (value/100) % 10);
+		spi_writeSegment(4, (value/1000) % 10);
+	}
 }
