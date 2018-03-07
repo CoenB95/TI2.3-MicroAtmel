@@ -13,5 +13,10 @@
 void Week4_assignment1();
 void Week4_assignment2();
 void Week4_assignment3();
+void Week4_assignment4();
+
+void displayDriverInit();
+void displayOn();
+void displayOff();
 
 #endif /* MAIN_H_ */
