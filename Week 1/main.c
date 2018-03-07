@@ -1,8 +1,8 @@
 /*
- * Week 1.c
+ * Week 1 - main.c
  *
  * Created: 1-3-2018 12:52:45
- * Author : coenb
+ * Author : Coen Boelhouwers, Sander de Nooijer
  */ 
 
 #define STATE_1HZ 1

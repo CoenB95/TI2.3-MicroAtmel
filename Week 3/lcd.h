@@ -1,8 +1,8 @@
 /*
- * lcd.h
+ * Week 3 - lcd.h
  *
  * Created: 23-2-2018 10:47:32
- *  Author: Coen Boelhouwers and Sander de Nooijer
+ *  Author: Coen Boelhouwers, Sander de Nooijer
  */ 
 
 

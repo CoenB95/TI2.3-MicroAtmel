@@ -2,7 +2,7 @@
  * wait.c
  *
  * Created: 23-2-2018 12:40:01
- *  Author: coenb
+ *  Author: Coen Boelhouwers, Sander de Nooijer
  */ 
 #define F_CPU 8000000
 

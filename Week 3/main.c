@@ -1,8 +1,8 @@
 /*
- * Week 3.c
+ * Week 3 - main.c
  *
  * Created: 23-2-2018 10:46:33
- * Author : Coen Boelhouwers and Sander de Nooijer
+ * Author : Coen Boelhouwers, Sander de Nooijer
  */ 
 
 
