@@ -22,5 +22,7 @@ void spi_write(unsigned char);
 char spi_writeRead( unsigned char);
 void spi_slaveSelect(unsigned char);
 void spi_slaveDeSelect(unsigned char);
+void spi_writeSegment(unsigned char, unsigned char);
+void spi_writeNumber(int);
 
 #endif /* SPI_H_ */

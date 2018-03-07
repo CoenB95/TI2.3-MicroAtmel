@@ -124,6 +124,8 @@ void Week4_assignment3()
 
 void Week4_assignment4()
 {
+	int i = 0;
+	
 	DDRB=0x01;					// Set PB0 pin as output for display select
 	spi_masterInit();              	// Initialize spi module
 	displayDriverInit();            // Initialize display chip
@@ -138,15 +140,15 @@ void Week4_assignment4()
 	}
 	wait(1000);
 	
+	spi_writeNumber(4321);
+	wait(1000);
+	
 	// write 4-digit data
-	for (char i =1; i<=4; i++)
+	while (i < 10000)
 	{
-		spi_slaveSelect(0);       // Select display chip
-		spi_write(i);         	// 	digit adress: (digit place)
-		spi_write(i);  			// 	digit value: i (= digit place)
-		spi_slaveDeSelect(0); 		// Deselect display chip
-		
-		wait(1000);
+		i++;
+		spi_writeNumber(i);
+		wait(250);
 	}
 	wait(1000);
 }

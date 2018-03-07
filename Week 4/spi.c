@@ -47,3 +47,18 @@ void spi_slaveDeSelect(unsigned char chipNumber)
 	PORTB |= BIT(chipNumber);
 }
 
+void spi_writeSegment(unsigned char address, unsigned char data)
+{
+	spi_slaveSelect(0);		// Select display chip
+	spi_write(address);     // 	digit adress: (digit place)
+	spi_write(data);  		// 	digit value: i (= digit place)
+	spi_slaveDeSelect(0); 	// Deselect display chip
+}
+
+void spi_writeNumber(int value)
+{
+	spi_writeSegment(1, value % 10);
+	spi_writeSegment(2, (value/10) % 10);
+	spi_writeSegment(3, (value/100) % 10);
+	spi_writeSegment(4, (value/1000) % 10);
+}
